@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AA4C15622C7E3CCC008F5A43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4C15602C7E3CCC008F5A43 /* AppDelegate.swift */; };
+		AA4C15632C7E3CCC008F5A43 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4C15572C7E3CCC008F5A43 /* HomeViewController.swift */; };
+		AA4C15642C7E3CCC008F5A43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA4C155B2C7E3CCC008F5A43 /* Assets.xcassets */; };
+		AA4C15652C7E3CCC008F5A43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA4C155E2C7E3CCC008F5A43 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		AA4C14DB2C7E39DC008F5A43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,38 +34,12 @@
 		AA4C14C42C7E39DA008F5A43 /* FuzeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuzeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4C14DA2C7E39DC008F5A43 /* FuzeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4C14E42C7E39DC008F5A43 /* FuzeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4C15572C7E3CCC008F5A43 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AA4C155B2C7E3CCC008F5A43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA4C155C2C7E3CCC008F5A43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA4C155D2C7E3CCC008F5A43 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA4C15602C7E3CCC008F5A43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		AA4C14EC2C7E39DC008F5A43 /* Exceptions for "FuzeApp" folder in "FuzeApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = AA4C14C32C7E39DA008F5A43 /* FuzeApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		AA4C14C62C7E39DA008F5A43 /* FuzeApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				AA4C14EC2C7E39DC008F5A43 /* Exceptions for "FuzeApp" folder in "FuzeApp" target */,
-			);
-			path = FuzeApp;
-			sourceTree = "<group>";
-		};
-		AA4C14DD2C7E39DC008F5A43 /* FuzeAppTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FuzeAppTests;
-			sourceTree = "<group>";
-		};
-		AA4C14E72C7E39DC008F5A43 /* FuzeAppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FuzeAppUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AA4C14C12C7E39DA008F5A43 /* Frameworks */ = {
@@ -88,9 +69,7 @@
 		AA4C14BB2C7E39DA008F5A43 = {
 			isa = PBXGroup;
 			children = (
-				AA4C14C62C7E39DA008F5A43 /* FuzeApp */,
-				AA4C14DD2C7E39DC008F5A43 /* FuzeAppTests */,
-				AA4C14E72C7E39DC008F5A43 /* FuzeAppUITests */,
+				AA4C15562C7E3CA7008F5A43 /* FuzeApp */,
 				AA4C14C52C7E39DA008F5A43 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +82,58 @@
 				AA4C14E42C7E39DC008F5A43 /* FuzeAppUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AA4C15562C7E3CA7008F5A43 /* FuzeApp */ = {
+			isa = PBXGroup;
+			children = (
+				AA4C156B2C7E3CEA008F5A43 /* Start */,
+				AA4C156A2C7E3CE8008F5A43 /* Features */,
+				AA4C15692C7E3CE5008F5A43 /* Resources */,
+			);
+			path = FuzeApp;
+			sourceTree = "<group>";
+		};
+		AA4C15692C7E3CE5008F5A43 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA4C155B2C7E3CCC008F5A43 /* Assets.xcassets */,
+				AA4C155C2C7E3CCC008F5A43 /* Info.plist */,
+				AA4C155E2C7E3CCC008F5A43 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA4C156A2C7E3CE8008F5A43 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AA4C156C2C7E3D14008F5A43 /* Scenes */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AA4C156B2C7E3CEA008F5A43 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				AA4C15602C7E3CCC008F5A43 /* AppDelegate.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		AA4C156C2C7E3D14008F5A43 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AA4C156D2C7E3D1A008F5A43 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AA4C156D2C7E3D1A008F5A43 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AA4C15572C7E3CCC008F5A43 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +150,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				AA4C14C62C7E39DA008F5A43 /* FuzeApp */,
 			);
 			name = FuzeApp;
 			packageProductDependencies = (
@@ -143,9 +171,6 @@
 			dependencies = (
 				AA4C14DC2C7E39DC008F5A43 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				AA4C14DD2C7E39DC008F5A43 /* FuzeAppTests */,
-			);
 			name = FuzeAppTests;
 			packageProductDependencies = (
 			);
@@ -165,9 +190,6 @@
 			);
 			dependencies = (
 				AA4C14E62C7E39DC008F5A43 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				AA4C14E72C7E39DC008F5A43 /* FuzeAppUITests */,
 			);
 			name = FuzeAppUITests;
 			packageProductDependencies = (
@@ -225,6 +247,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA4C15652C7E3CCC008F5A43 /* LaunchScreen.storyboard in Resources */,
+				AA4C15642C7E3CCC008F5A43 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA4C15622C7E3CCC008F5A43 /* AppDelegate.swift in Sources */,
+				AA4C15632C7E3CCC008F5A43 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +307,17 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		AA4C155E2C7E3CCC008F5A43 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA4C155D2C7E3CCC008F5A43 /* LaunchScreen.storyboard */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		AA4C14EE2C7E39DC008F5A43 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -291,10 +328,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L923PSABUA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FuzeApp/Info.plist;
+				INFOPLIST_FILE = FuzeApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,10 +356,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L923PSABUA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FuzeApp/Info.plist;
+				INFOPLIST_FILE = FuzeApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
