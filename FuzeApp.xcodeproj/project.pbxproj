@@ -97,8 +97,8 @@
 		AA4C15692C7E3CE5008F5A43 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AA4C155B2C7E3CCC008F5A43 /* Assets.xcassets */,
 				AA4C155C2C7E3CCC008F5A43 /* Info.plist */,
+				AA4C155B2C7E3CCC008F5A43 /* Assets.xcassets */,
 				AA4C155E2C7E3CCC008F5A43 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
