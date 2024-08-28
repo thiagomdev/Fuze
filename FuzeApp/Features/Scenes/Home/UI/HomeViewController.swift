@@ -30,6 +30,11 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(
+            withIdentifier: HomeViewCell.identifier,
+            for: indexPath) as? HomeViewCell {
+            return cell
+        }
         return UITableViewCell()
     }
 }
@@ -42,6 +47,6 @@ extension HomeViewController {
             NSAttributedString.Key.foregroundColor: UIColor.white]
         navigation.navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigation.navigationController?.navigationBar.barTintColor = .container
+        navigation.navigationController?.navigationBar.barTintColor = .colorApp
     }
 }

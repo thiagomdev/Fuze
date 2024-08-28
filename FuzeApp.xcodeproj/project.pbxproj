@@ -13,6 +13,7 @@
 		AA4C15652C7E3CCC008F5A43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA4C155E2C7E3CCC008F5A43 /* LaunchScreen.storyboard */; };
 		AA4C15732C7EB718008F5A43 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4C15722C7EB718008F5A43 /* HomeView.swift */; };
 		AA4C15772C7EB74D008F5A43 /* ViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4C15762C7EB74A008F5A43 /* ViewConfig.swift */; };
+		AA4C157C2C7EC7E2008F5A43 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4C157B2C7EC7E2008F5A43 /* HomeViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		AA4C15602C7E3CCC008F5A43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA4C15722C7EB718008F5A43 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AA4C15762C7EB74A008F5A43 /* ViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfig.swift; sourceTree = "<group>"; };
+		AA4C157B2C7EC7E2008F5A43 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				AA4C15722C7EB718008F5A43 /* HomeView.swift */,
 				AA4C15572C7E3CCC008F5A43 /* HomeViewController.swift */,
+				AA4C157B2C7EC7E2008F5A43 /* HomeViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				AA4C15772C7EB74D008F5A43 /* ViewConfig.swift in Sources */,
 				AA4C15732C7EB718008F5A43 /* HomeView.swift in Sources */,
+				AA4C157C2C7EC7E2008F5A43 /* HomeViewCell.swift in Sources */,
 				AA4C15622C7E3CCC008F5A43 /* AppDelegate.swift in Sources */,
 				AA4C15632C7E3CCC008F5A43 /* HomeViewController.swift in Sources */,
 			);

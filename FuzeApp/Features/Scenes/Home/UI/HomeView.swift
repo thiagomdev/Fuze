@@ -3,7 +3,10 @@ import UIKit
 final class HomeView: UIView {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .container
+        tableView.backgroundColor = .colorApp
+        tableView.separatorInset = .init(top: 0, left: 27, bottom: 0, right: 27)
+        tableView.separatorStyle = .none
+        tableView.register(HomeViewCell.self, forCellReuseIdentifier: HomeViewCell.identifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -43,6 +46,6 @@ extension HomeView: ViewConfig {
     }
     
     func configUI() {
-        backgroundColor = .colorApp
+        backgroundColor = .container
     }
 }
