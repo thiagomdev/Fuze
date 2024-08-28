@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "fuze.png",
       "idiom" : "universal"
     }
   ],
