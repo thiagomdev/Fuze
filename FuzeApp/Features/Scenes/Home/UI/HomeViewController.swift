@@ -11,6 +11,11 @@ final class HomeViewController: UIViewController {
         super.loadView()
         view = homeView
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setup(navigation: self)
+    }
 }
 
 extension HomeViewController: UITableViewDelegate {
@@ -26,5 +31,17 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
+    }
+}
+
+extension HomeViewController {
+    private func setup(navigation: UIViewController) {
+        navigation.navigationItem.title = "Partidas"
+        navigation.navigationController?.navigationBar.prefersLargeTitles = true
+        navigation.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigation.navigationController?.navigationBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigation.navigationController?.navigationBar.barTintColor = .container
     }
 }

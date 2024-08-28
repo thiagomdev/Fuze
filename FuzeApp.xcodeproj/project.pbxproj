@@ -177,6 +177,7 @@
 		AA4C15742C7EB734008F5A43 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AA4C15782C7EBEBF008F5A43 /* Constants */,
 				AA4C15752C7EB73F008F5A43 /* ViewConfig */,
 			);
 			path = Core;
@@ -188,6 +189,13 @@
 				AA4C15762C7EB74A008F5A43 /* ViewConfig.swift */,
 			);
 			path = ViewConfig;
+			sourceTree = "<group>";
+		};
+		AA4C15782C7EBEBF008F5A43 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
