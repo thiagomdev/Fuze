@@ -1,10 +1,3 @@
-//
-//  Matches.swift
-//  FuzeApp
-//
-//  Created by Thiago Monteiro on 28/08/24.
-//
-
 struct Matches: Decodable {
     let beginAt: String?
     let detailedStats: Bool

@@ -1,10 +1,3 @@
-//
-//  HomeViewModel.swift
-//  FuzeApp
-//
-//  Created by Thiago Monteiro on 28/08/24.
-//
-
 import Foundation
 
 protocol HomeViewModeling {

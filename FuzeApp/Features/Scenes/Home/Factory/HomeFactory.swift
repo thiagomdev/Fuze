@@ -1,10 +1,3 @@
-//
-//  HomeFactory.swift
-//  FuzeApp
-//
-//  Created by Thiago Monteiro on 28/08/24.
-//
-
 import UIKit
 
 enum HomeFactory {
