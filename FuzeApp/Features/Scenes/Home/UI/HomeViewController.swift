@@ -1,32 +1,52 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
+    private let viewModel: HomeViewModeling
+    
     private lazy var homeView: HomeView = {
         let view = HomeView()
-        view.set(tableView: self, and: self)
+        view.set(delegate: self, dataSource: self)
         return view
     }()
+    
+    init(viewModel: HomeViewModeling) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
     
     override func loadView() {
         super.loadView()
         view = homeView
+        
+        viewModel.fetchData { result in
+            switch result {
+            case .success(let success):
+                dump(success)
+            case .failure(let failure):
+                dump(failure)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setup(navigation: self)
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return 192
     }
 }
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

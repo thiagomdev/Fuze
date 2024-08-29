@@ -23,8 +23,8 @@ final class HomeView: UIView {
 
 extension HomeView {
     func set(
-        tableView delegate: UITableViewDelegate,
-        and dataSource: UITableViewDataSource) {
+        delegate: UITableViewDelegate,
+        dataSource: UITableViewDataSource) {
             
         tableView.delegate = delegate
         tableView.dataSource = dataSource

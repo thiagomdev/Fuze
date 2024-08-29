@@ -28,10 +28,21 @@ extension HomeViewCell: ViewConfig {
     
     func pin() {
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 6),
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -6),
+            containerView.topAnchor.constraint(
+                equalToSystemSpacingBelow: contentView.topAnchor,
+                multiplier: 1.5),
+            
+            containerView.leadingAnchor.constraint(
+                equalToSystemSpacingAfter: contentView.leadingAnchor,
+                multiplier: 3),
+            
+            contentView.trailingAnchor.constraint(
+                equalToSystemSpacingAfter: containerView.trailingAnchor,
+                multiplier: 3),
+            
+            contentView.bottomAnchor.constraint(
+                equalToSystemSpacingBelow: containerView.bottomAnchor,
+                multiplier: 1.5)
         ])
     }
     
