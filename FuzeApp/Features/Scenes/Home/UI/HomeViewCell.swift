@@ -42,7 +42,7 @@ extension HomeViewCell: ViewConfig {
             
             contentView.bottomAnchor.constraint(
                 equalToSystemSpacingBelow: containerView.bottomAnchor,
-                multiplier: 1.5),
+                multiplier: 1.5)
         ])
     }
     

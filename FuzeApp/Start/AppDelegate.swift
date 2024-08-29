@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     private func start() -> Bool {
-        let navigation = UINavigationController(rootViewController: HomeViewController())
+        let navigation = UINavigationController(rootViewController: HomeFactory.make())
         window = UIWindow(frame: UIScreen.main.coordinateSpace.bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = navigation
