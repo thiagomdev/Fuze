@@ -1,7 +1,7 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-    private let viewModel: HomeViewModeling
+    private var viewModel: HomeViewModeling
     
     private lazy var homeView: HomeView = {
         let view = HomeView()
@@ -17,11 +17,15 @@ final class HomeViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = homeView
-        
-        viewModel.fetchData { result in
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.fetchData { [weak self] result in
             switch result {
-            case .success(let success):
-                dump(success)
+            case let .success(mathes):
+                self?.viewModel.mathes = mathes
+                self?.homeView.tableView.reloadData()
             case .failure(let failure):
                 dump(failure)
             }
@@ -40,19 +44,20 @@ final class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 192
+        return 240
     }
 }
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return viewModel.mathes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(
             withIdentifier: HomeViewCell.identifier,
             for: indexPath) as? HomeViewCell {
+            cell.setupCell(from: viewModel.mathes[indexPath.row])
             return cell
         }
         return UITableViewCell()
