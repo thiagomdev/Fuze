@@ -22,7 +22,7 @@ extension Service: ServicingProtocol {
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = [
             "accept": "application/json",
-            "authorization": "Bearer lenc1neUDlJq9iTPA4UK9YcFz_9y7E1HjTysWIberVUqtIeJG3A"
+            "authorization": ""
         ]
         
         session.dataTask(with: request) { data, response, error in
