@@ -1,7 +1,7 @@
 import UIKit
 
 final class HomeView: UIView {
-    private lazy var tableView: UITableView = {
+    private(set) lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .colorApp
         tableView.separatorInset = .init(top: 0, left: 27, bottom: 0, right: 27)

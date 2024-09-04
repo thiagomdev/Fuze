@@ -11,6 +11,14 @@ final class HomeViewCell: UITableViewCell {
         return view
     }()
     
+    private lazy var inLiveView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .red
+        view.layer.cornerRadius = 4
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private lazy var stackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
@@ -59,7 +67,7 @@ final class HomeViewCell: UITableViewCell {
     
     private lazy var teamOneLabel: UILabel = {
         let label = UILabel()
-        label.text = "Time 1"
+//        label.text = "Time 1"
         label.textColor = .lightGray
         label.font = .systemFont(ofSize: 14, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -102,9 +110,16 @@ final class HomeViewCell: UITableViewCell {
     }
 }
 
+extension HomeViewCell {
+    func setupCell(from dataObject: Matches) {
+        teamOneLabel.text = dataObject.name
+    }
+}
+
 extension HomeViewCell: ViewConfig {
     func buildViews() {
         contentView.addSubview(containerView)
+        containerView.addSubview(inLiveView)
         stackView.addArrangedSubview(teamImageOne)
         stackView.addArrangedSubview(vsLabel)
         stackView.addArrangedSubview(teamImageTwo)
@@ -136,6 +151,11 @@ extension HomeViewCell: ViewConfig {
                 equalToSystemSpacingBelow: containerView.bottomAnchor,
                 multiplier: 1.5),
             
+            inLiveView.topAnchor.constraint(equalTo: containerView.topAnchor),
+            inLiveView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            inLiveView.heightAnchor.constraint(equalToConstant: 28),
+            inLiveView.widthAnchor.constraint(equalToConstant: 64),
+            
             stackView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
             
@@ -154,7 +174,7 @@ extension HomeViewCell: ViewConfig {
             separatorView.heightAnchor.constraint(equalToConstant: 1),
             
             leagueAndSerieImage.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -5),
-            leagueAndSerieImage.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
+            leagueAndSerieImage.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 14),
             leagueAndSerieImage.heightAnchor.constraint(equalToConstant: 20),
             leagueAndSerieImage.widthAnchor.constraint(equalToConstant: 20)
         ])
